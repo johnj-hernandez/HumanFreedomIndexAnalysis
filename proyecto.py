@@ -48,6 +48,9 @@ centros=cluster.cluster_centers_
 centros=pd.DataFrame(centros)
 centros.columns=list(datos2016_2)
 
+#Exportamos los datos
+centros.to_csv("centros.csv")
+
 datos2016['cluster']=cluster.labels_
 
 datos2016.plot.scatter(x='pf_score',y='ef_score',c='cluster',colormap='viridis')
@@ -56,4 +59,6 @@ datos2016.plot.scatter(x='pf_score',y='ef_score',c='cluster',colormap='viridis')
 #ya tenemos los clusters en datos2016 y datos 2016_2 representa las columnas usadas para el clustering
 datos2016[datos2016['countries']=='Colombia']
 
+#filtamos paises de cada cluster
+datos2016[datos2016['cluster']==2]
 
