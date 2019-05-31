@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
-pd.set_option('display.max_columns'none)
+#pd.set_option('display.max_columns'none)
 stats = [
     "pf_ruleOfLaw",
     "pf_securityAndSafaty",
@@ -62,4 +62,4 @@ for stats_name in stats:
     i=i+1
 tabla=pd.DataFrame(datos,index=stats,columns=["Error medio Cuadrado", "R^2", "Predicciones"])
 print(tabla)
-#export_csv = tabla.to_csv (r'C:\Users\ASUS\source\repos\ProyectoLenguaje\ProyectoLenguaje\export_dataframe.csv', header=True)
+export_csv = tabla.to_csv (r'newCsvForAnalysis.csv', header=True)
