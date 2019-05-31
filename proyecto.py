@@ -58,7 +58,10 @@ datos2016.plot.scatter(x='pf_score',y='ef_score',c='cluster',colormap='viridis')
 
 #ya tenemos los clusters en datos2016 y datos 2016_2 representa las columnas usadas para el clustering
 datos2016[datos2016['countries']=='Colombia']
-
+#observamos las caracteristicas de otros paises como mexico que caen en el mismo cluster de colombia
+datos2016[datos2016['countries']=='Mexico']
 #filtamos paises de cada cluster
+datos2016[datos2016['cluster']==1]
 datos2016[datos2016['cluster']==2]
+
 
